@@ -5,8 +5,7 @@ RUN apt-get update && \
 
 RUN wget https://dl.min.io/client/mc/release/linux-amd64/mc \
     && chmod +x mc \
-    && mv mc /usr/local/bin/ \
-    && mc --help
+    && mv mc /usr/local/bin/
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY ./scripts/entrypoint.sh /entrypoint.sh
